@@ -7,4 +7,4 @@ As of now it just deletes messages that contain variations of "uwu" and "owo" an
 
 Potential Ideas:
 
--Temporaily make it so the bot redacts all messages from console
+-Temporaily make it so the bot redacts all messages from console, and then remove this feature after he finds out about it through use
