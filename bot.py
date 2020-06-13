@@ -1,9 +1,7 @@
 import discord
 
-token = "NzIwMzg3ODA1NTM2MDU5NDE0.XuHL9A.AVvpTWGLJsHsmB4QFTnkzByXpVI"
+token = "NzIwMzg3ODA1NTM2MDU5NDE0.XuQpyA.lc1x61RjY5ZfTRnn8zap2bDqtVU"
 client = discord.Client()
-
-print("test")
 
 @client.event
 async def on_message(message):
