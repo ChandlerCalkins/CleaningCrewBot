@@ -5,6 +5,9 @@ prefix = '!'
 client = discord.Client()
 silenced = 0
 
+def hasPermission(userID):
+    return userID == 224746044502704130 or userID == 215296706131001345 or userID == 161216398159380480
+
 @client.event
 async def on_message(message):
     global silenced
@@ -46,14 +49,15 @@ async def on_message(message):
             await message.channel.send("[REDACTED]")
         #allows people to redact other people
         elif len(words) == 2 and index == 0 and words[index] == prefix + "silence":
-            if message.author.id == 224746044502704130 or message.author.id == 215296706131001345 or message.author.id == 161216398159380480:
+            if hasPermission(message.author.id):
                 silenced = message.mentions[0].id
                 await message.channel.send("Silencing Initiated...")
         #unsilences the silenced
         elif len(words) == 1 and index ==0 and words[index] == prefix + "free":
-            if message.author.id == 224746044502704130 or message.author.id == 215296706131001345 or message.author.id == 161216398159380480:
+            if hasPermission(message.author.id):
                 silenced = 0
                 await message.channel.send("Silencing Terminated...")
         index = index + 1
 
 client.run(token)
+
