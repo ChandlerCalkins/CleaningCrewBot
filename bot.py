@@ -49,12 +49,12 @@ async def on_message(message):
             await message.delete()
             await message.channel.send("[REDACTED]")
         #allows people to redact other people
-        elif len(words) == 2 and index == 0 and words[index] == prefix + "silence":
+        elif len(words) >= 2 and index == 0 and words[index].lower() == prefix + "silence":
             if hasPermission(message.author.id):
                 silenced = message.mentions[0].id
                 await message.channel.send("Silencing Initiated...")
         #unsilences the silenced
-        elif len(words) == 1 and index ==0 and words[index] == prefix + "free":
+        elif len(words) == 1 and index == 0 and words[index].lower() == prefix + "free":
             if hasPermission(message.author.id):
                 silenced = 0
                 await message.channel.send("Silencing Terminated...")
