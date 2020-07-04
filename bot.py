@@ -7,7 +7,7 @@ silenced = 0
 
 #returns if the person using the command is allowed to or not
 def hasPermission(userID):
-    return userID == 224746044502704130 or userID == 215296706131001345 or userID == 161216398159380480
+    return userID == 224746044502704130 or userID == 215296706131001345 or userID == 161216398159380480 or userID == 181713957248172032
 
 @client.event
 async def on_message(message):
