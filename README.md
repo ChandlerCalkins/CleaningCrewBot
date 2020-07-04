@@ -15,4 +15,4 @@ Current bot features:
 
 Potential Ideas:
 
--Temporaily make it so the bot redacts all messages from console, and then remove this function after he finds out about it through use
+-Find a slur detecting library and use it with this bot
