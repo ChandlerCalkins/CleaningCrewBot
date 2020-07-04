@@ -11,6 +11,10 @@ Current bot features:
 
 -deletes messages that contain :point_right: :point_left: emojis in that order and then instantly says "[REDACTED]"
 
+-give a few select people the ability to silence people with the bot, which makes the bot instantly redact all messages that person says regardless
+  -the select few can also free that person from being silenced
+   -only one person can be silenced at a time
+
 ---------------------------------------------------------------
 
 Potential Ideas:
